@@ -18,8 +18,8 @@ cmd + shift - j : yabai -m window --warp south || yabai -m window --display sout
 cmd + shift - k : yabai -m window --warp north || yabai -m window --display north
 
 # Moving focus when switching workspaces
-cmd + ctrl - j : yabai -m display --focus south
-cmd + ctrl - k : yabai -m display --focus north
+cmd + ctrl - j : yabai -m display --focus west || yabai -m display --focus south
+cmd + ctrl - k : yabai -m display --focus east || yabai -m display --focus north
 
 # move window to space #
 shift + alt - 1 : yabai -m window --space 1;
