@@ -91,3 +91,33 @@ shift + lctrl + alt - r : \
 # Make window native fullscreen
 alt - f         : yabai -m window --toggle zoom-fullscreen
 cmd + shift - f : yabai -m window --toggle native-fullscreen
+
+#######################
+#testing new settings
+#######################
+
+# Move focus container to workspace
+shift + alt - m : yabai -m window --space last; yabai -m space --focus last
+shift + alt - p : yabai -m window --space prev; yabai -m space --focus prev
+shift + alt - n : yabai -m window --space next; yabai -m space --focus next
+shift + alt - 1 : yabai -m window --space 1; yabai -m space --focus 1
+shift + alt - 2 : yabai -m window --space 2; yabai -m space --focus 2
+shift + alt - 3 : yabai -m window --space 3; yabai -m space --focus 3
+shift + alt - 4 : yabai -m window --space 4; yabai -m space --focus 4
+
+# Focus
+ctrl - o         : yabai -m config focus_follows_mouse autofocus
+ctrl - p         : yabai -m config focus_follows_mouse off
+
+# Create space on the active display
+ctrl - n : yabai -m space --create
+
+# Delete focused space and focus first space on display
+ctrl - m : yabai -m space --destroy
+
+# Move focus container to display (use "space" instead of display to move to just per space instead)
+ctrl + shift - x : yabai -m window --display 1 --focus # main monitor
+ctrl + shift - z : yabai -m window --display 2 --focus # vertical
+
+# Show mission control
+cmd + ctrl - k : open -a "Mission Control"
