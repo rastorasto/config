@@ -103,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls='ls -Ga'
-alias ani='anipy-cli -p iina'
+alias ani='ani-cli'
 alias finder='open .'
 alias ff='fastfetch'
 
