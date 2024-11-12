@@ -3,6 +3,9 @@
 cmd - return : "${HOME}"/.config/skhd/openiterm2.sh
 cmd - 0 : open -na "Safari"
 cmd - e : open -a "Finder"
+#cmd + ctrl - q : open -a "ScreenSaverEngine"
+# When minimizing the window, focus next one
+cmd - m : yabai -m window --minimize; yabai -m window --focus recent
 #cmd - q : yabai -m window --close
 
 # Navigation
@@ -89,7 +92,7 @@ shift + lctrl + alt - r : \
 
 
 # Make window native fullscreen
-alt - f         : yabai -m window --toggle zoom-fullscreen
+ctrl - f         : yabai -m window --toggle zoom-fullscreen
 cmd + shift - f : yabai -m window --toggle native-fullscreen
 
 #######################
@@ -106,8 +109,8 @@ shift + alt - 3 : yabai -m window --space 3; yabai -m space --focus 3
 shift + alt - 4 : yabai -m window --space 4; yabai -m space --focus 4
 
 # Focus
-ctrl - o         : yabai -m config focus_follows_mouse autofocus
-ctrl - p         : yabai -m config focus_follows_mouse off
+cmd + ctrl - o         : yabai -m config focus_follows_mouse autofocus
+cmd + ctrl - p         : yabai -m config focus_follows_mouse off
 
 # Create space on the active display
 ctrl - n : yabai -m space --create
