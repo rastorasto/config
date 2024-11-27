@@ -1,9 +1,15 @@
 # opens iTerm2
 #cmd - return : open -na "Terminal"
-cmd - return : "${HOME}"/.config/skhd/openiterm2.sh
-cmd - 0 : open -na "Safari"
+#cmd - return : "${HOME}"/.config/skhd/openiterm2.sh
+cmd - 7 : open -a "Music"
+cmd - 8 : open -a "Obsidian"
+cmd - 9 : open -a "Discord"
+cmd - 0 : open -a "Safari"
+cmd - 6 : open -a "Visual Studio Code"
 cmd - e : open -a "Finder"
-#cmd + ctrl - q : open -a "ScreenSaverEngine"
+cmd + ctrl - q : open -a "ScreenSaverEngine"
+cmd - return : open -na "Kitty"
+
 # When minimizing the window, focus next one
 cmd - m : yabai -m window --minimize; yabai -m window --focus recent
 #cmd - q : yabai -m window --close

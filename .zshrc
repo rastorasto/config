@@ -24,7 +24,7 @@ ZSH_THEME="kafeitu"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
+ zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
@@ -112,6 +112,10 @@ alias github='cd ~/Documents/Github/'
 alias fsmerlin='mkdir ~/Merlin && sshfs merlin: ~/Merlin && cd ~/Merlin'
 alias dcmerlin='umount ~/Merlin && rmdir ~/Merlin'
 alias ili='ssh -p 2222 root@127.0.0.1'
+alias vim='nvim'
+export EDITOR=nvim
+export VISUAL=nvim
+
 
 # Created by `pipx` on 2024-08-19 18:02:01
 export PATH="$PATH:/Users/void/.local/bin"
@@ -120,3 +124,4 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
