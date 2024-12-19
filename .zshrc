@@ -107,7 +107,6 @@ alias ani='ani-cli'
 alias finder='open .'
 alias ff='fastfetch'
 alias school='cd ~/Documents/School/'
-alias ifj='cd ~/Documents/Github/IFJ24/'
 alias github='cd ~/Documents/Github/'
 alias fsmerlin='mkdir ~/Merlin && sshfs merlin: ~/Merlin && cd ~/Merlin'
 alias dcmerlin='umount ~/Merlin && rmdir ~/Merlin'
@@ -115,6 +114,8 @@ alias ili='ssh -p 2222 root@127.0.0.1'
 alias vim='nvim'
 export EDITOR=nvim
 export VISUAL=nvim
+alias ssh="kitten ssh"
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 
 # Created by `pipx` on 2024-08-19 18:02:01

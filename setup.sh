@@ -2,6 +2,7 @@
 #!/bin/bash
 
 #ohmyzsh theme name kafeitu
+brew install oh-my-zsh neovim yabai skhd
 
 # Create required directories
 mkdir -p ~/.config/yabai
