@@ -98,7 +98,9 @@ shift + lctrl + alt - r : \
 
 
 # Make window native fullscreen
-ctrl - f         : yabai -m window --toggle zoom-fullscreen
+#ctrl - f         : yabai -m window --toggle zoom-fullscreen
+ctrl - f : yabai -m window --toggle zoom-fullscreen; yabai -m window --focus $(yabai -m query --windows | jq -r '.[] | select(.["zoom-fullscreen"] == 1) | .id')
+
 cmd + shift - f : yabai -m window --toggle native-fullscreen
 
 #######################
