@@ -116,13 +116,14 @@ export EDITOR=nvim
 export VISUAL=nvim
 alias ssh="kitten ssh"
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
-
+# ?? not sure
+alias gdb='lldb'
 
 # Created by `pipx` on 2024-08-19 18:02:01
 export PATH="$PATH:/Users/void/.local/bin"
 
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
+#export PATH="$HOME/.pyenv/bin:$PATH"
+#eval "$(pyenv init --path)"
+#eval "$(pyenv init -)"
 
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"

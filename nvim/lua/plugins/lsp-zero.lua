@@ -87,33 +87,86 @@ return {
       lsp_zero.on_attach(function(client, bufnr)
         -- see :help lsp-zero-keybindings
         -- to learn the available actions
-        lsp_zero.default_keymaps({buffer = bufnr})
+      --  lsp_zero.default_keymaps({buffer = bufnr})
+	lsp_zero.default_keymaps({
+          buffer = bufnr,
+          preserve_mappings = false
+        })
       end)
 
-      --require('mason-lspconfig').setup({
-       -- ensure_installed = {'clangd'},  -- Ensure tsserver is installed
-       -- handlers = {
-          -- this first function is the "default handler"
-          -- it applies to every language server without a "custom handler"
-       --   function(server_name)
-        --    require('lspconfig')[server_name].setup({})
-         -- end,
-        require('mason-lspconfig').setup({ ensure_installed = { 'clangd' }, handlers = { function(server_name) local capabilities = require('cmp_nvim_lsp').default_capabilities() require('lspconfig')[server_name].setup({ capabilities = capabilities }) end,
 
-          -- this is the "custom handler" for `lua_ls`
---          lua_ls = function()
-            -- (Optional) Configure lua language server for neovim
- --           local lua_opts = lsp_zero.nvim_lua_ls()
-  --          require('lspconfig').lua_ls.setup(lua_opts)
-   --       end,
-    --      tsserver = function()
-     --       require('lspconfig').tsserver.setup({
-      --        on_attach = function(client, bufnr)
-                -- Add any specific settings for tsserver here
-       --         lsp_zero.default_keymaps({buffer = bufnr})
-        --      end,
- --           })
---          end,
+    require('mason-lspconfig').setup({
+        ensure_installed = {  -- Language servers to auto-install
+          'clangd',          -- C/C++
+          'pyright',         -- Python
+          'intelephense',    -- PHP
+          'marksman',        -- Markdown
+          'lua_ls'           -- Lua (for Neovim config)
+        },
+        handlers = {
+          -- Default handler for all servers
+          function(server_name)
+            local capabilities = require('cmp_nvim_lsp').default_capabilities()
+            -- Server-specific configurations
+            local server_opts = {
+              capabilities = capabilities
+            }
+
+            if server_name == 'clangd' then
+              server_opts.cmd = {
+                "clangd",
+                "--background-index",
+                "--clang-tidy",
+                "--header-insertion=never",
+                "--completion-style=detailed",
+                "--query-driver=/usr/bin/clang++",  -- Path to your actual compiler
+                "--compile-commands-dir=./"         -- Explicitly point to project root
+              }
+
+              -- Add fallback flags for single-file projects
+              server_opts.init_options = {
+                clangdFileStatus = true,
+                fallbackFlags = { "-std=c++20", "-Wall", "-Wextra" }
+              }
+            end
+
+            -- Python Configuration (pyright)
+            if server_name == 'pyright' then
+              server_opts.settings = {
+                python = {
+                  analysis = {
+                    typeCheckingMode = "basic",
+                    autoSearchPaths = true,
+                    diagnosticMode = "workspace",
+                  }
+                }
+              }
+            end
+
+            -- PHP Configuration (intelephense)
+            if server_name == 'intelephense' then
+              server_opts.settings = {
+                intelephense = {
+                  files = {
+                    maxSize = 5000000  -- Increase for large PHP files
+                  }
+                }
+              }
+            end
+
+            -- Lua Configuration (lua_ls)
+            if server_name == 'lua_ls' then
+              server_opts.settings = {
+                Lua = {
+                  runtime = { version = 'LuaJIT' },
+                  workspace = { checkThirdParty = false },
+                  telemetry = { enable = false }
+                }
+              }
+            end
+
+            require('lspconfig')[server_name].setup(server_opts)
+          end
         }
       })
     end
