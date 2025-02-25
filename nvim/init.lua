@@ -53,20 +53,6 @@ vim.api.nvim_set_keymap('t', '<leader>q', [[<C-\><C-n>:q<CR>]], { noremap = true
 -- Exit terminal mode to normal mode
 vim.api.nvim_set_keymap('t', '<Esc>', [[<C-\><C-n>]], { noremap = true, silent = true })
 
-
--- nvim-ale config
---vim.cmd [[
- -- let g:ale_linters = {
-  --    \ 'typescript': ['ts_ls'],
-   --   \ 'typescriptreact': ['ts_ls'],
-    --  \ }
- -- let g:ale_fixers = {
-  --    \ 'typescript': ['prettier'],
-   --   \ 'typescriptreact': ['prettier'],
-    --  \ }
- -- let g:ale_fix_on_save = 1
---]]
-
 -- telescope binds
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
