@@ -112,6 +112,7 @@ alias fsmerlin='mkdir ~/Merlin && sshfs merlin: ~/Merlin && cd ~/Merlin'
 alias dcmerlin='umount ~/Merlin && rmdir ~/Merlin'
 alias ili='ssh -p 2222 root@127.0.0.1'
 alias vim='nvim'
+alias v='nvim'
 export EDITOR=nvim
 export VISUAL=nvim
 
