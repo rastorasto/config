@@ -110,9 +110,10 @@ ctrl-f = 'fullscreen'
 #alt-r = 'mode resize'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
-alt-slash = 'layout tiles horizontal vertical'     # dont know what this does
+alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
-#alt-y = ['mode service', 'layout floating tiling'] # toggle floating
+# trying floting for picture in picture
+alt-period = ['mode service', 'layout floating tiling'] # toggle floating
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 # cmd-h = 'focus left'
@@ -241,7 +242,4 @@ run = ['move-node-to-workspace Books']
 
 [[on-window-detected]]
 if.app-id = 'org.videolan.vlc'
-run = [
-  'layout tiling',
-  'move-node-to-workspace VLC'
-]
+run = ['layout tiling', 'move-node-to-workspace VLC']
