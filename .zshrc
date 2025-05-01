@@ -258,3 +258,9 @@ alias gdb='lldb'
 
 autoload -Uz compinit && compinit
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="$HOME/.emacs.d/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/void/.lmstudio/bin"
+# End of LM Studio CLI section
+

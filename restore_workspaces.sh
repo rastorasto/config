@@ -6,9 +6,9 @@
 # Ensure that jq is installed (use: brew install jq)
 
 # Array of target app names, corresponding to the "app-name" in aerospace list output.
-apps=("Books" "Discord" "Finder" "Mail" "Music" "Obsidian" "VLC" "Zed" "Zen")
+apps=("Books" "Discord" "Finder" "Mail" "Music" "Obsidian" "VLC" "Zed" "Zen" "Calendar" "Reminders")
 # Their corresponding workspace names; adjust them if needed.
-workspaces=("Books" "Discord" "Finder" "Mail" "Music" "Obsidian" "VLC" "Zed" "Zen")
+workspaces=("Books" "Discord" "Finder" "Mail" "Music" "Obsidian" "VLC" "Zed" "Zen" "CalRem" "CalRem")
 
 # Number of apps in our arrays.
 n=${#apps[@]}
