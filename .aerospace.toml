@@ -94,12 +94,12 @@ alt-enter = 'exec-and-forget kitty -d ~'
 alt-r = "exec-and-forget ~/Documents/Github/config/restore_workspaces.sh"
 cmd-ctrl-t = "exec-and-forget /usr/bin/shortcuts run \"New reminder :)\""
 
-cmd-7 = "exec-and-forget open -a 'Music'"
-cmd-8 = "exec-and-forget open -a 'Obsidian'"
-cmd-9 = "exec-and-forget open -a 'Discord'"
-cmd-0 = "exec-and-forget open -a 'Zen'"
-alt-f = "exec-and-forget open -a 'Emacs'" # temporary place
-cmd-e = "exec-and-forget open -a 'Finder'"
+# cmd-7 = "exec-and-forget open -a 'Music'"
+# cmd-8 = "exec-and-forget open -a 'Obsidian'"
+# cmd-9 = "exec-and-forget open -a 'Discord'"
+# cmd-0 = "exec-and-forget open -a 'Zen'"
+# alt-f = "exec-and-forget open -a 'Emacs'" # temporary place
+ cmd-e = "exec-and-forget open -a 'Finder'"
 
 cmd-ctrl-k = "exec-and-forget open -a 'Mission Control'"
 
@@ -154,25 +154,25 @@ alt-a = "workspace Zen"
 alt-s = "workspace Zed"
 alt-d = "workspace Discord"
 alt-m = "workspace Music"
-alt-n = "workspace Mail"
+alt-q = "workspace Mail"
 alt-o = "workspace Obsidian"
 alt-b = "workspace Books"
 alt-v = "workspace VLC"
-alt-c = "workspace CalRem" # Calendar and Reminders
+alt-w = "workspace CalRem" # Calendar and Reminders
 
 alt-shift-1 = "move-node-to-workspace 1"
 alt-shift-2 = "move-node-to-workspace 2"
 
 alt-shift-d = "move-node-to-workspace Discord"
 alt-shift-m = "move-node-to-workspace Music"
-alt-shift-n = "move-node-to-workspace Mail"
+alt-shift-q = "move-node-to-workspace Mail"
 alt-shift-o = "move-node-to-workspace Obsidian"
 alt-shift-b = "move-node-to-workspace Books"
 alt-shift-v = "move-node-to-workspace VLC"
 alt-shift-e = "move-node-to-workspace Finder"
 alt-shift-a = "move-node-to-workspace Zen"
 alt-shift-s = "move-node-to-workspace Zed"
-alt-shift-c = "move-node-to-workspace CalRem" # Calendar and Reminders
+alt-shift-w = "move-node-to-workspace CalRem" # Calendar and Reminders
 
 
 alt-ctrl-r = "exec-and-forget /usr/bin/env osascript -e 'display notification \"Restarting Aerospace\" with title \"RESTARTING\"'; restart"
